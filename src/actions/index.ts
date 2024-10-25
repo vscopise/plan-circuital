@@ -21,7 +21,7 @@ export const getCircuito = async ({ serie, numero }: Props) => {
             message: circuito!.direccion
         }
     } catch (error) {
-        console.log(error);
+        //console.log(error);
         return {
             ok: false,
             message: 'Error de base de datos'
