@@ -47,7 +47,7 @@ body {
 }
 
 .input-text {
-  @apply px-5 py-2 border bg-gray-300 rounded-lg uppercase mb-5;
+  @apply px-5 py-2 text-2xl border bg-gray-300 rounded-lg uppercase mb-5;
 }
 
 .btn-primary {

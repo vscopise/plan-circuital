@@ -20,7 +20,7 @@ export const SearchForm = () => {
                 placeholder="XXXXX"
                 className="input-text" 
             />
-            <div className="text-xl">Complete los datos para obtener la ubicación del local</div>
+            <div className="text-2xl">Complete los datos para obtener la ubicación del local</div>
         </>
     )
 }
