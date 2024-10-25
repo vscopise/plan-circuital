@@ -22,9 +22,9 @@ export const SearchForm = () => {
             setMessage('Error en el numero')
             return
         }
-        setMessage('ok')
+        setMessage('ok, cargando...')
         const { ok, message } = await getCircuito({ serie, numero })
-        console.log({message})
+        //console.log({message})
         if (ok) {
             setMessage(message);
         }
