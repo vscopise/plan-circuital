@@ -9,7 +9,7 @@ export const SearchForm = () => {
     const [serie, setSerie] = useState('');
     const [numero, setNumero] = useState('');
     const [message, setMessage] = useState('');
-    const [accesible, setAccesible] = useState('');
+    const [accesible, setAccesible] = useState('Accesible');
 
     const onSubmit = async () => {
         //console.log({ serie, numero });
