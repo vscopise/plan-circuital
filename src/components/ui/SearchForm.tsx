@@ -3,8 +3,6 @@
 import { usePathname, useRouter, useSearchParams } from 'next/navigation';
 import { useDebouncedCallback } from 'use-debounce';
 
-
-
 export const SearchForm = () => {
 
     const searchParams = useSearchParams();
@@ -41,8 +39,6 @@ export const SearchForm = () => {
                 className="input-text"
                 onChange={(e) => handleFilter(e.target.value, 'numero')}
             />
-
-
         </>
     );
 }
