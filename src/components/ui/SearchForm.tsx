@@ -9,7 +9,7 @@ export const SearchForm = () => {
     const [serie, setSerie] = useState('');
     const [numero, setNumero] = useState('');
     const [message, setMessage] = useState('');
-    const [accesible, setAccesible] = useState('');
+    const [esAccesible, setEsAccesible] = useState('');
 
 
 
@@ -26,10 +26,12 @@ export const SearchForm = () => {
         }
         setMessage('ok, cargando...');
         const { ok, message = '', accesible = '' } = await getCircuito({ serie, numero });
+
+        setEsAccesible(accesible)
         //console.log({message})
         if (ok) {
             setMessage(message);
-            setAccesible(`Accesible: ${accesible}`);
+            setEsAccesible(`Accesible: ${accesible}`);
             return;
         }
     };
@@ -68,8 +70,8 @@ export const SearchForm = () => {
                 </button>
             </div>
             <div className="text-2xl pt-3">
-                <p>{/*message*/}</p>
-                <p>{/*accesible*/}</p>
+                <p>{message}</p>
+                <p>{esAccesible}</p>
             </div>
         </>
     );
