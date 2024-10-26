@@ -23,10 +23,11 @@ export const getCircuito = async ({ serie, numero }: Props) => {
         }
     } catch (error) {
         //console.log(error);
+        throw new Error()
 
-        return {
+        /* return {
             ok: false,
             message: 'Error de base de datos'
-        }
+        } */
     }
 }
