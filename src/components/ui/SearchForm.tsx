@@ -22,7 +22,7 @@ export const SearchForm = () => {
             return
         }
         setMessage('ok, cargando...')
-        const { ok, message } = await getCircuito({ serie, numero })
+        const { ok, message } = await getCircuito({ serie: "", numero: "" })
         //console.log({message})
         if (ok) {
             setMessage(message);
