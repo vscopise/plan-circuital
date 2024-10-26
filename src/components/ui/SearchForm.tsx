@@ -9,6 +9,7 @@ export const SearchForm = () => {
     const [serie, setSerie] = useState('');
     const [numero, setNumero] = useState('');
     const [message, setMessage] = useState('');
+    const [accesible, setAccesible] = useState('');
 
     const onSubmit = async () => {
         //console.log({ serie, numero });
@@ -22,12 +23,14 @@ export const SearchForm = () => {
             return;
         }
         setMessage('ok, cargando...');
-        const { ok, message } = await getCircuito({ serie: "", numero: "" });
+        const { ok, message = '', accesible='' } = await getCircuito({ serie, numero });
         //console.log({message})
         if (ok) {
             setMessage(message);
+            setAccesible(`Accesible: ${accesible}`);
         }
     };
+
     return (
         <>
             <p>Serie</p>
@@ -59,7 +62,10 @@ export const SearchForm = () => {
                     Consultar
                 </button>
             </div>
-            <div className="text-2xl">{message}</div>
+            <div className="text-2xl pt-3">
+                <p>{message}</p>
+                <p>{accesible}</p>
+            </div>
         </>
     );
 }

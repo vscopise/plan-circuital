@@ -17,7 +17,8 @@ export const getCircuito = async ({ serie, numero }: Props) => {
     });
     return {
         ok: true,
-        message: circuito!.direccion
+        message: circuito?.direccion,
+        accesible: circuito?.accesible,
     }
     /*try {
      } catch (error) {
