@@ -28,6 +28,7 @@ export const SearchForm = () => {
         if (ok) {
             setMessage(message);
             setAccesible(`Accesible: ${accesible}`);
+            return;
         }
     };
 
@@ -57,7 +58,7 @@ export const SearchForm = () => {
             <div>
                 <button
                     className='btn-primary'
-                    onClick={() => onSubmit()}
+                    onClick={onSubmit}
                 >
                     Consultar
                 </button>
