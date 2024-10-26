@@ -8,24 +8,25 @@ interface Props {
 }
 
 export const getCircuito = async ({ serie, numero }: Props) => {
-    const circuito = await prisma.datos_Circuitos.findFirst({
-        where: {
-            serie: serie.toUpperCase(),
-            desde: { lte: parseInt(numero) },
-            hasta: { gte: parseInt(numero) }
+    try {
+        const circuito = await prisma.datos_Circuitos.findFirst({
+            where: {
+                serie: serie.toUpperCase(),
+                desde: { lte: parseInt(numero) },
+                hasta: { gte: parseInt(numero) }
+            }
+        });
+        return {
+            ok: true,
+            message: circuito?.direccion,
+            accesible: circuito?.accesible,
         }
-    });
-    return {
-        ok: true,
-        message: circuito?.direccion,
-        accesible: circuito?.accesible,
-    }
-    /*try {
-     } catch (error) {
+    } catch (error) {
         //console.log(error);
+
         return {
             ok: false,
             message: 'Error de base de datos'
         }
-    } */
+    }
 }
