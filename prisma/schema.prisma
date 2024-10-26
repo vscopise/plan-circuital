@@ -20,4 +20,5 @@ model Datos_Circuitos {
   desde     Int
   hasta     Int
   direccion String
+  accesible String @default("")
 }
