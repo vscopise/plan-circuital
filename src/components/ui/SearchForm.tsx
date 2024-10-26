@@ -27,8 +27,7 @@ export const SearchForm = () => {
         if (ok) {
             setMessage(message);
         }
-    }
-
+    };
     return (
         <>
             <p>Serie</p>
@@ -62,5 +61,5 @@ export const SearchForm = () => {
             </div>
             <div className="text-2xl">{message}</div>
         </>
-    )
+    );
 }
