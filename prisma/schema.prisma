@@ -1,0 +1,18 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Datos_Circuitos {
+  id        String @id
+  circuito  Int
+  serie     String
+  desde     Int
+  hasta     Int
+  direccion String
+  accesible String @default("")
+}
