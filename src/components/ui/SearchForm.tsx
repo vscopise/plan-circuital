@@ -11,7 +11,6 @@ export const SearchForm = () => {
 
     const handleFilter = useDebouncedCallback((term: string, field: string) => {
         const params = new URLSearchParams(searchParams);
-        params.set('page', '1');
         if (term) {
             params.set(field, term);
         } else {

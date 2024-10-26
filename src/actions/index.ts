@@ -33,6 +33,7 @@ export const getCircuito = async ({ serie, numero }: Props) => {
             });
             return {
                 ok: true,
+                circuito: circuito?.circuito,
                 mensaje: circuito?.direccion,
                 accesible: circuito?.accesible,
             }
