@@ -20,6 +20,7 @@ export const getCircuito = async ({ serie, numero }: Props) => {
         return {
             ok: true,
             mensaje: '',
+            municipio: '',
             accesible: '',
         }
     } else {
@@ -35,6 +36,7 @@ export const getCircuito = async ({ serie, numero }: Props) => {
                 ok: true,
                 circuito: circuito?.circuito,
                 mensaje: circuito?.direccion,
+                municipio: circuito?.municipio,
                 accesible: circuito?.accesible,
             }
         } catch (error) {

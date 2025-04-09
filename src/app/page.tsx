@@ -17,7 +17,7 @@ export default async function Home({ searchParams }: Props) {
   const serie = searchParams?.serie || '';
   const numero = searchParams?.numero || '';
 
-  const { ok, mensaje = '', accesible = '', circuito = '' } = await getCircuito({ serie, numero })
+  const { ok, mensaje = '', accesible = '', municipio = '', circuito = '' } = await getCircuito({ serie, numero })
 
   //if (!ok) return null;
 
@@ -39,6 +39,13 @@ export default async function Home({ searchParams }: Props) {
             'hidden': '' === mensaje
           })}>
             {mensaje}</p>
+            <p className={
+          clsx(
+          "mb-5",  
+          {
+            'hidden': '' === municipio
+          })}>
+            {`Municipio: ${municipio}`}</p>
             <p className={
           clsx(
           "mb-5",  

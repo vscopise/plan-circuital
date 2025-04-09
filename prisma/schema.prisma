@@ -8,11 +8,12 @@ datasource db {
 }
 
 model Datos_Circuitos {
-  id        String @id
+  id        String  @id @default(uuid())
   circuito  Int
   serie     String
   desde     Int
   hasta     Int
   direccion String
+  municipio String
   accesible String @default("")
 }
